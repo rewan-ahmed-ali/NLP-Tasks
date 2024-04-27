@@ -1,7 +1,10 @@
-# Question (2):
+"""
+Question (2):
+Write a python program that take an input text from the user and apply part-of-speech tagging, and return back correct tags per word.
+Note: use two different tagset and compare the output
+"""
 import nltk
 from nltk.tokenize import word_tokenize
-#sentence=>Spacy is designed specifically for production use and build NLP applications to process large volumes of text different from NLTK focused on teaching and learning perspective
 def pos_tagging_universal(input_text):
     tokens = word_tokenize(input_text)
     tagged_words = nltk.pos_tag(tokens, tagset='universal')
@@ -15,6 +18,7 @@ def pos_tagging_default(input_text):
 
 if __name__ == "__main__":
     input_text = input("Enter a sentence: ")
+    #sentence=>Spacy is designed specifically for production use and build NLP applications to process large volumes of text different from NLTK focused on teaching and learning perspective
     tagged_words_universal = pos_tagging_universal(input_text)
     tagged_words_default = pos_tagging_default(input_text)
     
